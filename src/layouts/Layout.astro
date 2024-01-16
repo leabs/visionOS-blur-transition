@@ -103,15 +103,21 @@ const { title } = Astro.props;
       @keyframes blur-in {
         0% {
           filter: blur(130px);
+          -webkit-filter: blur(130px);
           opacity: 0;
           transform: scale(1);
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
         }
         50% {
           transform: scale(1.35);
+          -webkit-transform: scale(1.35);
+          -ms-transform: scale(1.35);
         }
         ,
         100% {
           filter: blur(0px);
+          -webkit-filter: blur(0px);
           opacity: 1;
         }
       }
@@ -119,6 +125,7 @@ const { title } = Astro.props;
       /*Apply view transition to .content*/
       .content {
         animation: blur-in 0.3s ease-out;
+        -webkit-animation: blur-in 0.3s ease-out;
       }
     </style>
   </body>
